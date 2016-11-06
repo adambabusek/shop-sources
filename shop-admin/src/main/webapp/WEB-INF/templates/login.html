@@ -27,11 +27,11 @@
 		<form id="loginForm" method="post">
 			<div class="form-group">
 	    		<label class="control-label" for="email" th:text="#{login.email}">Email</label>
-      			<input type="email" class="form-control" id="email" placeholder="#{login.email.placeholder}">
+      			<input type="email" class="form-control" id="email" th:placeholder="#{login.email.placeholder}">
 	  		</div>
 	 		<div class="form-group">
 	    		<label class="control-label" for="pwd" th:text="#{login.password}">Password</label>
-      			<input type="password" class="form-control" id="pwd" placeholder="#{login.password.placeholder}">
+      			<input type="password" class="form-control" id="pwd" th:placeholder="#{login.password.placeholder}">
 	  		</div>
 			<div class="form-group">
       			<button type="submit" class="btn btn-default" th:text="#{login.submit}">Submit</button>
