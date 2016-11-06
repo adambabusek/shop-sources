@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="App for testing REST">
+	<meta name="keywords" content="REST, AJAX, Spring MVC">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shop Admin</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#loginForm").submit(function() {
+
+			});
+		});		
+	</script>
+
+</head>
+<body>
+	<h1>Shop Admin</h1>
+
+	<div class="container col-sm-4">
+		<form id="loginForm" method="post">
+			<div class="form-group">
+	    		<label class="control-label" for="email">Email:</label>
+      			<input type="email" class="form-control" id="email" placeholder="Enter email">
+	  		</div>
+	 		<div class="form-group">
+	    		<label class="control-label" for="pwd">Password:</label>
+      			<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+	  		</div>
+			<div class="form-group">
+      			<button type="submit" class="btn btn-default">Submit</button>
+	  		</div>
+		</form>
+	</div>
+	
+</body>
+</html>
