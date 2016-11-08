@@ -8,14 +8,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/")
 public class AppController {
 	
 	@Autowired
 	private MessageSource messageSource;
 
 	@RequestMapping("/login")
-	public String loginView() {		
-		System.out.println(messageSource.getMessage("login.submit", null, Locale.getDefault()));
+	public String loginView() {
 		return "login";
 	}
 }

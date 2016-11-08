@@ -15,6 +15,7 @@
 	<context:component-scan base-package="com.shop.admin.controllers" />
 
 	<!-- Spring's message source -->
+	<!-- Folder src/main/resources has to be added to project classpath -->
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="classpath:messages" /> <!-- Prefix of messages properties files. If there is no locale file (like 'messages_cs_CZ.properites') Spring searches for file 'messages.properies'. -->
 		<property name="defaultEncoding" value="UTF-8" />
@@ -26,7 +27,7 @@
 		<property name="prefix" value="/WEB-INF/templates/" />
 		<property name="suffix" value=".html" />
 		<property name="templateMode" value="HTML5" />
-		<property name="characterEncoding" value="UTF-8" />
+		<property name="cacheable" value="false" />
 	</bean>
 
 	<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
@@ -35,6 +36,7 @@
 
 	<bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
 		<property name="templateEngine" ref="templateEngine" />
+		<property name="characterEncoding" value="UTF-8" /> <!-- characterEncoding is important to set to ThymeleafViewResolver for correct utf-8 characters -->
 	</bean>
 	
 
