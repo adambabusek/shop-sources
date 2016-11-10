@@ -9,7 +9,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public boolean isAdmin(String email, String password) {
-		if ("adam.babusek@gmail.com".equals(email) && "admin".equals(password)) {
+		if ("admin@shop.com".equals(email) && "admin".equals(password)) {
 			return true;
 		}
 		return false;
