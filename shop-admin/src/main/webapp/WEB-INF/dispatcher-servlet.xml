@@ -13,6 +13,7 @@
 	<mvc:annotation-driven />
 
 	<context:component-scan base-package="com.shop.admin.controllers" />
+	<context:component-scan base-package="com.shop.admin.service.impl" />
 
 	<!-- Spring's message source -->
 	<!-- Folder src/main/resources has to be added to project classpath -->
@@ -27,7 +28,7 @@
 		<property name="prefix" value="/WEB-INF/templates/" />
 		<property name="suffix" value=".html" />
 		<property name="templateMode" value="HTML5" />
-		<property name="cacheable" value="false" />
+		<property name="cacheable" value="false" /> <!-- Thymeleaf will not cache templates - all changes in templates are published immediately. This is probably good only for development. -->
 	</bean>
 
 	<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">

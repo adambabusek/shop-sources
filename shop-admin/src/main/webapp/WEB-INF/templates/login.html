@@ -12,10 +12,18 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#loginForm").submit(function() {
-
+			$("#loginForm").submit(function(event) {
+				event.preventDefault();
+				var email = $("#email").val();
+				var pwd = $("#pwd").val();
+				$.post("login",
+						{ email: email, password: pwd},
+						function(data, status){
+					        alert("Data: " + data + "\nStatus: " + status);
+					    });
 			});
-		});		
+		});	
+		
 	</script>
 
 </head>
